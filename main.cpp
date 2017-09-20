@@ -168,11 +168,11 @@ int main() {
         num q = prime_max79( rand() %80 );
     }
 
-    p = 9999991;
-    q = 11999989;
+//    p = 9999991;
+//    q = 11999989;
 
-    p =17;
-    q =19;
+//    p =17;
+//    q =19;
 
     n = p * q;
     num phi = (p-1)*(q-1);      // 'phi' is also known as 'r'
@@ -205,8 +205,8 @@ int main() {
 
     string msg = "Secret Messages!";
 
-    cout << "Podaj wiadomośc:";
-    getline(cin, msg);
+//    cout << "Podaj wiadomośc:";
+//    getline(cin, msg);
 
     vector<num> encrypted;
 
