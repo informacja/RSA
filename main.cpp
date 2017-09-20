@@ -5,6 +5,7 @@
 #include <vector>
 #include <functional>
 #include <time.h>
+#include <math.h>
 
 using namespace std;
 
@@ -204,8 +205,9 @@ int main() {
 
     string msg = "Secret Messages!";
 
-//    cout << "Podaj wiadomośc:";
-//    getline(cin, msg);
+    cout << "Podaj wiadomośc:";
+    getline(cin, msg);
+
     vector<num> encrypted;
 
     transform(msg.begin(), msg.end(),
