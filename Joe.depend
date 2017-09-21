@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1505942272 source:c:\users\puler\desktop\joe\rsa\main.cpp
+1506023900 source:c:\users\puler\desktop\joe\rsa\main.cpp
 	<iostream>
 	<iterator>
 	<algorithm>
 	<vector>
 	<functional>
 	<time.h>
+	<math.h>
 

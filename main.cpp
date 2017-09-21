@@ -11,8 +11,6 @@ using namespace std;
 
 typedef unsigned long long num;
 
-//const num e = 65537;
-//const num d = 38110914516113;
  num n;
 
 // ---------------------------------------------------------------
@@ -205,8 +203,8 @@ int main() {
 
     string msg = "Secret Messages!";
 
-//    cout << "Podaj wiadomośc:";
-//    getline(cin, msg);
+    cout << "\nPodaj wiadomosc:";
+    getline(cin, msg);
 
     vector<num> encrypted;
 
