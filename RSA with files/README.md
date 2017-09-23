@@ -1,5 +1,3 @@
 <h2>Samouczek</h2>
-https://goo.gl/hdZhhH
 
-
-<img src="https://goo.gl/hdZhhH" href="" alt="gif"/>
+<img src="how_to_use.gif" href="" alt="gif"/>
