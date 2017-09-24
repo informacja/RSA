@@ -6,6 +6,7 @@
 #include <functional>
 #include <time.h>
 #include <math.h>
+#include <conio.h>  // geth
 
 using namespace std;
 
@@ -154,16 +155,41 @@ num get_e( num e, num phi )
 
 // ---------------------------------------------------------------
 
+bool auto_generate_primes( num &p, num &q )
+{
+    cout << "Szyfrowanie RSA\n1. Wprowadz liczby pierwsze ( p, q )\n";
+    cout << "2. Generuj automatycznie ( Default )\n";
+
+    if ( getch() == '1' )
+    {
+        cout << "\nPodaj p: ";
+        cin >> p;
+        cout << "Podaj q: ";
+        cin >> q;
+        cout << endl;
+        return false;
+    }
+    system("cls");
+    return true;
+}
+
+// ---------------------------------------------------------------
+
 int main() {
 
     srand( time(NULL) );                    // wymagane do działania losowości
 
-    num p = prime_max79( rand() %80 );      // minimalna liczba pierwsza to 11
-    num q = prime_max79( rand() %80 );
+    num p = 0, q = 0;
 
-    while( p == q )
+    if ( auto_generate_primes( p, q ) )
     {
-        num q = prime_max79( rand() %80 );
+        p = prime_max79( rand() %80 );      // minimalna liczba pierwsza to 11
+        q = prime_max79( rand() %80 );
+
+        while( p == q )
+        {
+            num q = prime_max79( rand() %80 );
+        }
     }
 
     n = p * q;
@@ -192,12 +218,16 @@ int main() {
     cout << "d = " << d << endl;
     cout << "n = " << n << endl;
     cout << "r = " << phi << endl;
-    cout << "\nRule: (1) = " << (e*d) % phi << "\ngcd(e,phi): "<< gcd (e, phi) <<  endl;
-    cout << "minimum log(e) >= log(n)/4 | " << log(e) << "\t >=  " << log(n)/4  << endl;
+    cout << "\n(e*d) % r: (1) = " << (e*d) % phi << " (wzglednie pierwsza)\n";
+    cout << "NWD(e,phi):(1) = "<< gcd (e, phi) <<  endl;
+    cout << "minimum log(e) >= log(n)/4 | (" << log(e) << " >= " << log(n)/4  << ")\n";
 
     string msg = "Secret Messages!";
 
-    cout << "\nPodaj wiadomosc:";
+    cin.clear();    // gdy uzyjemy opcji wprowadzania danych recznie
+    cin.sync();
+
+    cout << "\nPodaj wiadomosc: ";
     getline(cin, msg);
     cout << "\nWzor ogolny: S = M^e % n \nS = ";
 
@@ -211,7 +241,7 @@ int main() {
     cout<<'\b'; cout<<'\b'; cout<<'\b';    cout<<'\b'; //Cursor moves 1 position backwards
     cout<<"   ";   //Overwrites letter 'i' with space
 
-    cout << "\n";
+    cout << "\nDeszyfrowano: ";
 
     transform(encrypted.begin(), encrypted.end(),
         ostream_iterator<char>(cout, ""),
