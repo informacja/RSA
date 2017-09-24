@@ -166,12 +166,6 @@ int main() {
         num q = prime_max79( rand() %80 );
     }
 
-//    p = 9999991;
-//    q = 11999989;
-
-//    p =17;
-//    q =19;
-
     n = p * q;
     num phi = (p-1)*(q-1);      // 'phi' is also known as 'r'
 
@@ -199,12 +193,13 @@ int main() {
     cout << "n = " << n << endl;
     cout << "r = " << phi << endl;
     cout << "\nRule: (1) = " << (e*d) % phi << "\ngcd(e,phi): "<< gcd (e, phi) <<  endl;
-    cout << "minimum log(e) >= log(n)/4 : " << log(e) << "\t" << log(n)/4  << endl;
+    cout << "minimum log(e) >= log(n)/4 | " << log(e) << "\t >=  " << log(n)/4  << endl;
 
     string msg = "Secret Messages!";
 
     cout << "\nPodaj wiadomosc:";
     getline(cin, msg);
+    cout << "\nWzor ogolny: S = M^e % n \nS = ";
 
     vector<num> encrypted;
 
@@ -212,13 +207,16 @@ int main() {
         back_inserter(encrypted),
         bind2nd(crypt(), e));
 
-    copy(encrypted.begin(), encrypted.end(), ostream_iterator<num>(cout, "\n"));
+    copy(encrypted.begin(), encrypted.end(), ostream_iterator<num>(cout, "\nS = "));
+    cout<<'\b'; cout<<'\b'; cout<<'\b';    cout<<'\b'; //Cursor moves 1 position backwards
+    cout<<"   ";   //Overwrites letter 'i' with space
 
     cout << "\n";
 
     transform(encrypted.begin(), encrypted.end(),
         ostream_iterator<char>(cout, ""),
         bind2nd(crypt(), d));
+
     cout << "\n";
 
     return 0;

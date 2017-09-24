@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1506281730 source:c:\users\puler\desktop\joe\rsa\main.cpp
+	<iostream>
+	<iterator>
+	<algorithm>
+	<vector>
+	<functional>
+	<time.h>
+	<math.h>
+

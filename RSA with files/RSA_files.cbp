@@ -33,6 +33,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="colors.h" />
 		<Unit filename="file.h" />
 		<Unit filename="header.h" />
 		<Unit filename="main.cpp" />
