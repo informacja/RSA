@@ -68,7 +68,8 @@
 						<li class="fragment"><span class="gray">Wybieramy losowo dwie liczby pierwsze </span> <span class="green">p</span> i <span class="green">q</span> </li>
 						<li class="fragment"><b class="blue">n</b> = <span class="green">p</span> * <span class="green">q</span> <span class="hljs-quote"> </span> </li>
 						<li class="fragment"><span class="orange"> Ø </span>= (p - 1)(q - 1) <span class="gray"> względnie pierwszych do </span> <b class="blue">n</b></li>
-						<li class="fragment"> <span class="red">e</span> <span class="gray">gdzie</span> NWD(<span class="red">e</span>,<span class="orange"> Ø </span>(<b class="blue">n</b>)) <comment class="gray"> względnie pierwsza</comment></li>
+						<li class="fragment"> <span class="red">e</span> <span class="gray">gdzie</span> 1 < <span class="red">e</span> < <span class="orange"> Ø </span>
+							, NWD(<span class="red">e</span>,<span class="orange"> Ø </span>(<b class="blue">n</b>))<comment class="gray"> względnie pierwsza</comment>, </li>
 						<li class="fragment"> <span class="indigo">d</span> * <span class="red">e</span> % <span class="orange"> Ø </span>(<b class="blue">n</b>)) == 1,
 							<span class="indigo">d</span> < <span class="orange"> Ø </span>(<b class="blue">n</b>)</li>
 						<p> </p>
@@ -97,7 +98,7 @@
 				<section>
 					<h3>Szyfrowanie</h3>
 
-						<p><span class="yellow">c</span> = m^<span class="red">e</span> % <b class="blue">Ø(n)</b></p>
+						<p><span class="yellow">c</span> = m^<span class="red">e</span> % <b class="blue">n</b></p>
 
 					<p>m - to wiadomość do zaszyfrowania, m < n</p>
 
@@ -109,7 +110,7 @@
 
 				<section>
 					<h3>Deszyfracja</h3>
-					<p>m = <span class="yellow">c</span> ^<span class="indigo">d</span> % <b class="blue">Ø(n)</b></p>
+					<p>m = <span class="yellow">c</span> ^<span class="indigo">d</span> % <b class="blue">n</b></p>
 					<hr>
 					<p>19 = <span class="yellow">8</span> ^<b class="indigo">131</b> % <b class="blue">187</b></p>
 					<p>18 = <span class="yellow">18</span> ^<b class="indigo">131</b> % <b class="blue">187</b></p>
