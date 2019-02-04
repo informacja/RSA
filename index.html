@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/blood.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+			.green	{ color: #28a745;}
+			.red	{ color: #dc3545}
+			.blue 	{ color: #007bff;}
+			.orange	{ color: #fd7e14;}
+			.indigo	{ color: #6610f2}
+			.yellow	{ color: #ffc107}
+			.gray	{ color: #6c757d}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+				<h1>RSA</h1>
+					<a href="https://github.com/informacja/RSA" target="_blank" class="roll"><span data-title="slid.es/gsklee">
+						<i class="fab fa-github"></i>&nbsp;informacja</span>
+					</a>
+				</section>
+				<section tagcloud bw shufle large >
+					Secure
+					Internet Connections
+					ISS
+					Passwords
+					Hackers
+					Encryption
+					Espionage
+					NSA
+					CIA
+					S/Key
+					SSL
+					Information Security
+					Priavacy Information
+					PGP
+					Digital signage
+				</section>
+
+				<section data-transition=" fade-out">
+						<h3>Generowanie kluczy</h3>
+					<ol>
+						<li class="fragment"><span class="gray">Wybieramy losowo dwie liczby pierwsze </span> <span class="green">p</span> i <span class="green">q</span> </li>
+						<li class="fragment"><b class="blue">n</b> = <span class="green">p</span> * <span class="green">q</span> <span class="hljs-quote"> </span> </li>
+						<li class="fragment"><span class="orange"> Ø </span>= (p - 1)(q - 1) <span class="gray"> 	// tocjent</span> </li>
+						<li class="fragment"> <span class="red">e</span> <span class="gray">gdzie</span> <a href="https://www.matemaks.pl/algorytm-euklidesa.html">NWD</a>(<span class="red">e</span>,<span class="orange"> Ø </span>(<b class="blue">n</b>))
+							<span class="gray"> oraz </span><span class="red">e</span> < <span class="orange"> n </span></li>
+						<li class="fragment"> <span class="indigo">d</span> * <span class="red">e</span> % <span class="orange"> Ø </span>(<b class="blue">n</b>)) == 1,
+							<span class="indigo">d</span> < <span class="orange"> Ø </span>(<b class="blue">n</b>)</li>
+						<p> </p>
+					</ol>
+				</section>
+
+				<section data-transition="fade-in">
+					<h3>Generowanie kluczy</h3>
+					<ol>
+						<li><span class="green">p</span> = 11  <span class="green">q</span> = 17</li>
+						<li><b class="blue">n</b> = <span class="green">11</span> * <span class="green">17</span> =  187 </li>
+						<li><span class="orange"> Ø </span>= (<span class="green">11</span> - 1)(<span class="green">17</span> - 1) = <span class="orange"> 160 </span>  </li>
+						<li><span class="red">e</span> = 11, dla <a href="https://www.matemaks.pl/algorytm-euklidesa.html">NWD</a>(<span class="red">11</span>,<span class="orange"> Ø </span>(<b class="blue">187</b>) == 1 </li>
+						<li><span class="indigo">131</span> * <span class="red">11</span> % <span class="orange"> 160 </span> = 1 </li>
+					</ol>
+				</section>
+
+				<section>
+					<h4>Klucz publiczny</h4>
+					<p> [<b class="red">11</b>, <b class="blue">187</b> ]</p>
+					<br>
+					<h4>Klucz prywatny</h4>
+					<p> [ <b class="indigo">131</b>, <b class="blue">187</b> ]</p>
+				</section>
+
+				<section>
+					<h3>Szyfrowanie</h3>
+
+						<p><span class="yellow">c</span> = m^<span class="red">e</span> % <b class="blue">n</b></p>
+
+					<p>m - to wiadomość do zaszyfrowania, m < n</p>
+
+					<hr>
+					<p>m = 1918</p>
+					<p><span class="yellow">8</span> = 19^<b class="red">11</b> % <b class="blue">187</b></p>
+					<p><span class="yellow">18</span> = 18^<b class="red">11</b> % <b class="blue">187</b></p>
+				</section>
+
+				<section>
+					<h3>Deszyfracja</h3>
+					<p>m = <span class="yellow">c</span> ^<span class="indigo">d</span> % <b class="blue">n</b></p>
+					<hr>
+					<p>19 = <span class="yellow">8</span> ^<b class="indigo">131</b> % <b class="blue">187</b></p>
+					<p>18 = <span class="yellow">18</span> ^<b class="indigo">131</b> % <b class="blue">187</b></p>
+
+
+					<p>m = "19"  + "18" </p>
+
+				</section>
+				<section>
+					<h5>Dziękuję za uwagę</h5>
+					<a href="https://github.com/informacja/RSA" target="_blank" class="roll"><span data-title="slid.es/gsklee">
+						<i class="fab fa-github"></i>&nbsp;github.com/informacja/rsa</span>
+					</a>
+
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/tagcloud/tagcloud.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+
+            // Reveal.addEventListener( 'ready', function( event ) {
+            //     Reveal.slide(3, 0); //go to slide horizontal / vertical
+            // } );
+
+            Reveal.configure({ slideNumber: true });
+
+            // Slide number formatting can be configured using these variables:
+            //  "h.v": 	horizontal . vertical slide number (default)
+            //  "h/v": 	horizontal / vertical slide number
+            //    "c": 	flattened slide number
+            //  "c/t": 	flattened slide number / total slides
+            Reveal.configure({ slideNumber: 'c/t' });
+		</script>
+	</body>
+</html>
