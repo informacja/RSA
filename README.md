@@ -6,4 +6,4 @@
 <p>Drugi program to gotowy algorytm szyfrujący (samouczek w pliku read.me) <a href="./C++">C++</a>  opierający się na zapisie zaszyfrowaniej wiadomości do pliku</p>
 
 
-<p>Program napisany w  <a href="./C">C</a> powstał jako zaliczenie na studia. Kod jest on nieco zagmatwany, nie mniej polecam jako lekturę dla pasjonatów</p> 
+<p>Program napisany w  <a href="./C">C</a> powstał jako zaliczenie na studia. Kod jest on nieco zagmatwany, nie mniej polecam jako lekturę dla pasjonatom przydzielania pamięci malloc()'iem</p> 
