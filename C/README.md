@@ -1,1 +1,1 @@
-#Pliki *.pro są interpretowane w środowisku Qt Creator
+#Pliki <i>*.pro</i> są interpretowane w środowisku Qt Creator, nie są one integralną częścią projektu.
