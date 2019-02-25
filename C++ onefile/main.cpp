@@ -249,5 +249,7 @@ int main() {
 
     cout << "\n";
 
+    getchar(); // like a system("pause")
+
     return 0;
 }

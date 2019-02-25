@@ -9,3 +9,13 @@
 	<math.h>
 	<conio.h>
 
+1551122533 source:p:\rsa\c++ onefile\main.cpp
+	<iostream>
+	<iterator>
+	<algorithm>
+	<vector>
+	<functional>
+	<time.h>
+	<math.h>
+	<conio.h>
+
