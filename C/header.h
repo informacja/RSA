@@ -1,7 +1,7 @@
 #ifndef HEADER_H
 #define HEADER_H
 
-#define FINAL             // without any log eg. read/save info
+#define FINAL             // without any console log eg. read/save info
 #define COLOR_CONSOLE     // Don't #include <windows.h>
 
 #include <stdio.h>
