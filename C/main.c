@@ -1,10 +1,11 @@
-/****************************
-*                           *
-*   Author: Piotr Wawryka   *
-*   Date  : 01-02-2019      *
-*   License GNU GPL         *
-*                           *
-****************************/
+/************************************
+*                           		*
+*   License: GNU GPL   				*
+*	Date   : 01-02-2019 			*
+*   Author : Piotr Wawryka      	*
+*   Email  : piotrwpwsz@gmail.com 	*
+*                           		*
+************************************/
 
 #include "header.h"
 
