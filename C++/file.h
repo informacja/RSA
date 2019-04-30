@@ -112,9 +112,6 @@ void load_file_as_num( string nazwaPliku, vector<num> &encrypted )
     while (infile >> buff)
         encrypted.push_back(buff);
 
-
-
-
 //       while( !out.eof() )
 //        {
 //            encrypted.push_back (myint);
