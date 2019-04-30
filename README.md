@@ -1,5 +1,5 @@
 ## Dzień dobry
-<p>Jeśli chcesz zgłębić swoją wiedzę na temat programowego szyfrowania metodą RSA to dobrze trafiłeś 😉 Ta <a href="https://informacja.github.io/RSA/"> prezentacja </a> powinna Cię nieco rozświetlić jakie jest założenie RSA, na przykładzie </p>
+<p>Jeśli chcesz zgłębić swoją wiedzę na temat programowego szyfrowania metodą RSA to dobrze trafiłeś 😉 Ta <a href="https://informacja.github.io/RSA/docs"> prezentacja </a> powinna Cię nieco rozświetlić jakie jest założenie RSA, na przykładzie </p>
 
 <p>Repozytorium zawiera 3 programy, jako pierwszy został napisany <a href="./C++ onefile">C++ onefile</a>  jest to też <b>najprostszy w interpretacji</b> przykład szyfrowania</p>
 
