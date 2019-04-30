@@ -45,4 +45,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+<<<<<<< HEAD
+=======
+
+# build dirs
 build-RSA-Desktop*
+
+# Qt config files
+*.pro.user
+>>>>>>> refs/remotes/origin/C
