@@ -1,7 +1,7 @@
 /************************************
 *                           		*
 *   License: GNU GPL                *
-*   Date   : 01-02-2019 		    *
+*   Date   : 01-02-2019             *
 *   Author : Piotr Wawryka      	*
 *   Email  : piotrwpwsz@gmail.com 	*
 *                           		*
